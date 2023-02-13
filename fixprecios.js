@@ -1,5 +1,8 @@
 function hasValidPrice(product) {
-    return   product.price >= 0  
-  }
+  if(product={})
+  { return false}
+  else
+  return (product.hasOwnProperty("product") && typeof product.price === 'number' && product.price>=0)
+}
 
-console.log(hasValidPrice(hasValidPrice({ "product": "Milk", price: 1.50 })));
+console.log(hasValidPrice({ "product": "Cheese", price: -1 }));
